@@ -1,0 +1,100 @@
+.project-container  {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0;
+}
+
+.container-title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container-title h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.container-title .subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0 0;
+}
+
+.projects-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    width: 90%; /* Make the cards smaller */
+    margin: 0 auto; /* Center the cards within their grid cells */
+    text-align: center; /* Center text content horizontally */
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project-info {
+    position: absolute;
+    top: 280px; /* Margin on top */
+    left: 5px; /* Margin on left */
+    color: white;
+    z-index: 1;
+    background-color: #3982b8; /* Semi-transparent green background */
+    padding: 5px 10px; /* Padding for better appearance */
+    border-radius: 3px; /* Optional: for rounded corners */
+    backdrop-filter: blur(0.2px); /* Blurred background effect */
+}
+
+
+.video-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.animated-video {
+    width: 100%;
+    height: auto;
+    transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+}
+
+.project-card:hover .animated-video {
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+    overflow: hidden;
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.6s ease-in-out;
+}
+
+.hover-zoom img {
+    transform: scale(1);
+}
+
+.project-card:hover .hover-zoom img {
+    transform: scale(1.2);
+}
+
+/* Grid adjustment for a single card below the first row and centered */
+.projects-content > :nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 90%; /* Make the centered card smaller */
+    margin: 0 auto; /* Center the single card */
+}
